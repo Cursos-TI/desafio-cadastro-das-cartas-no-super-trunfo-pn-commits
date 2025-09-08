@@ -8,7 +8,9 @@
 
 int main() {
     
-    char estado2, estado1, codigo1[3], codigo2[3], cidade1[10], cidade2[10];
+    char estado2, estado1, codigo1[3], cidade2[10];
+    char codigo2[3];
+    char cidade1[10];
     int pop1, pop2, tur1, tur2;
     float area1, area2, pib1, pib2;
 
@@ -37,7 +39,7 @@ int main() {
 
 
     printf("\n\n\nInforme a letra do 2º estado:  \n");
-    scanf("%s", estado2);
+    scanf("%c", &estado2);
 
     printf("Informe o codigo da 2º carta: \n");
     scanf("%s", codigo2);
@@ -70,7 +72,7 @@ int main() {
     
 
     printf("Carta 2: \n");
-    printf("Estado: %s \n", estado2);
+    printf("Estado: %c \n", estado2);
     printf("Código: %s \n", codigo2);
     printf("Nome da cidade: %s \n", cidade2);
     printf("População: %d \n", pop2);

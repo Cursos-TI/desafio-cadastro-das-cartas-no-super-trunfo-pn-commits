@@ -13,6 +13,8 @@ int main() {
     char cidade1[10];
     int pop1, pop2, tur1, tur2;
     float area1, area2, pib1, pib2;
+    
+
 
     printf("Informe a letra do 1º estado: \n");
     scanf("%c", &estado1);
@@ -59,6 +61,14 @@ int main() {
     printf("Informe o número de Pontos Turísticos da 2ª cidade: \n");
     scanf("%d", &tur2);
 
+
+    // calculo de densidade populacional (DP) e Pib per capita (PPC)
+    float DP1 =pop1/area1;
+    float DP2 =pop2/area2;
+    float PPC1 =pib1/pop1;
+    float PPC2 =pib2/pop2;
+
+
     printf("Carta 1: \n");
     printf("Estado: %c \n", estado1);
     printf("Código: %s \n", codigo1);
@@ -66,9 +76,9 @@ int main() {
     printf("População: %d \n", pop1);
     printf("Área: %f km²\n", area1);
     printf("PIB: %f bilhões de reais\n", pib1);
-    printf("Números de pontos turísticos: %d \n\n", tur1);
-
-        
+    printf("Números de pontos turísticos: %d \n", tur1);
+    printf("Densidade populacional: %.2f hab/km² \n", DP1);
+    printf("PIB per capita: %.2f R$ \n\n", PPC1);
     
 
     printf("Carta 2: \n");
@@ -79,6 +89,9 @@ int main() {
     printf("Área: %f km²\n", area2);
     printf("PIB: %f bilhões de reais\n", pib2);
     printf("Números de pontos turísticos: %d \n", tur2);
+    printf("Densidade populacional: %.2f hab/km² \n", DP2);
+    printf("PIB per capita: %.2f R$ \n\n", PPC2);
+
 
     return 0;
     

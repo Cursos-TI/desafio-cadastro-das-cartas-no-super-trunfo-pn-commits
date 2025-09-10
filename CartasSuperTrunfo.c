@@ -114,8 +114,7 @@ int main() {
     rsuper =super2>super1;
     rsuper++;
 
-
-
+    // desafio mestre parte 1
     printf("Exibindo resultados: ");
     printf("População: Carta %d venceu \n", rpop);
     printf("Turismo: Carta %d venceu \n", rtur);
@@ -123,9 +122,19 @@ int main() {
     printf("PIB: Carta %d venceu \n", rpib);
     printf("Densidade Populacional: Carta %d venceu \n", rDP);
     printf("PIB per capita: Cidade %d venceu \n", rPPC);
-    printf("Super poder: Cidade %d venceu \n", rsuper);
+    printf("Super poder: Cidade %d venceu \n\n\n", rsuper);
 
+    //desafio iniciante de logica
+    printf("Comparativo população:\n");
+    printf("Carta 1: %s, população = %d \n", cidade1, pop1);
+    printf("Carta 2: %s, população = %d \n", cidade2, pop2);
 
+    if (pop1>pop2) {
+        printf("%s venceu!", cidade1);
+        
+    }   else {
+        printf("%s venceu!", cidade2);
+    }
 
     return 0;
     

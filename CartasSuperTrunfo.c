@@ -40,7 +40,7 @@ int main() {
     
 
 
-    printf("\n\n\nInforme a letra do 2º estado:  \n");
+    printf("Informe a letra do 2º estado: ");
     scanf("%c", &estado2);
 
     printf("Informe o codigo da 2º carta: \n");
@@ -68,6 +68,10 @@ int main() {
     float PPC1 =pib1/pop1;
     float PPC2 =pib2/pop2;
 
+    // super poder
+    long int super1 =pop1+area1+pib1+tur1+PPC1-DP1;
+    long int super2 =pop2+area2+pib2+tur2+PPC2-DP2;
+
 
     printf("Carta 1: \n");
     printf("Estado: %c \n", estado1);
@@ -78,8 +82,8 @@ int main() {
     printf("PIB: %f bilhões de reais\n", pib1);
     printf("Números de pontos turísticos: %d \n", tur1);
     printf("Densidade populacional: %.2f hab/km² \n", DP1);
-    printf("PIB per capita: %.2f R$ \n\n", PPC1);
-    
+    printf("PIB per capita: %.2f R$ \n", PPC1);
+    printf("Super Poder: %.2lu \n\n", super1);
 
     printf("Carta 2: \n");
     printf("Estado: %c \n", estado2);
@@ -90,7 +94,37 @@ int main() {
     printf("PIB: %f bilhões de reais\n", pib2);
     printf("Números de pontos turísticos: %d \n", tur2);
     printf("Densidade populacional: %.2f hab/km² \n", DP2);
-    printf("PIB per capita: %.2f R$ \n\n", PPC2);
+    printf("PIB per capita: %.2f R$ \n", PPC2);
+    printf("Super Poder: %.2lu \n\n", super2);
+
+
+    int rpop, rtur, rarea, rpib, rDP, rPPC, rsuper;
+    rpop =pop2>pop1;
+    rpop++;
+    rtur =tur2>tur1;
+    rtur++;
+    rarea =area2>area1;
+    rarea++;
+    rpib =pib2>pib1;
+    rpib++;
+    rDP =DP1>DP2;
+    rDP++;
+    rPPC =PPC2>PPC1;
+    rPPC++;
+    rsuper =super2>super1;
+    rsuper++;
+
+
+
+    printf("Exibindo resultados: ");
+    printf("População: Carta %d venceu \n", rpop);
+    printf("Turismo: Carta %d venceu \n", rtur);
+    printf("Area: Carta %d venceu \n", rarea);
+    printf("PIB: Carta %d venceu \n", rpib);
+    printf("Densidade Populacional: Carta %d venceu \n", rDP);
+    printf("PIB per capita: Cidade %d venceu \n", rPPC);
+    printf("Super poder: Cidade %d venceu \n", rsuper);
+
 
 
     return 0;

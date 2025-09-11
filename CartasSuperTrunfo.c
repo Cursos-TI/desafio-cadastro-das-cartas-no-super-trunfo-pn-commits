@@ -39,8 +39,7 @@ int main() {
 
     
 
-
-    printf("Informe a letra do 2º estado: ");
+    printf("informe a letra do 2º estado: \n");
     scanf("%c", &estado2);
 
     printf("Informe o codigo da 2º carta: \n");
@@ -136,6 +135,126 @@ int main() {
         printf("%s venceu!", cidade2);
     }
 
-    return 0;
+    // desafio aventureiro
+    int menu;
+
+    printf("\n\nSelecione o atributo desejado:\n");
+    printf("1 - População\n");
+    printf("2 - Pontos turisticos\n");
+    printf("3 - Area\n");
+    printf("4 - PIB\n");
+    printf("5 - Densidade Populacional\n");
+    printf("6 - PIB per capita\n");
+    printf("7 - Super poder\n\n");
+
+    scanf ("%d", &menu);
+
+
+    switch (menu)    {
+        case 1:
+            printf("Cidade 1: %s \n", cidade1);
+            printf("População: %d \n", pop1);
+            printf("Cidade 2: %s \n", cidade2);
+            printf("População: %d \n", pop2);
+                 if (pop1>pop2) {
+                    printf("%s foi a vencedora!", cidade1);
+                }       else if(pop1<pop2)   {
+                    printf("%s foi a vencedora!", cidade2);
+                }       else    {
+                        printf("Houve um empate!");
+                    }
+        break;
+
+        case 2:
+            printf("Cidade 1: %s \n", cidade1);
+            printf("Pontos turísticos: %d \n", tur1);
+            printf("Cidade 2: %s \n", cidade2);
+            printf("Pontos turísticos: %d \n", tur2);
+                 if (tur1>tur2) {
+                    printf("%s foi a vencedora!", cidade1);
+                }       else if(tur1<tur2)   {
+                    printf("%s foi a vencedora!", cidade2);
+                }       else    {
+                        printf("Houve um empate!");
+                    }
+        break;
+
+        case 3:
+            printf("Cidade 1: %s \n", cidade1);
+            printf("Area: %d \n", area1);
+            printf("Cidade 2: %s \n", cidade2);
+            printf("Area: %d \n", area2);
+                 if (area1>area2) {
+                    printf("%s foi a vencedora!", cidade1);
+                }       else if(area1<area2)   {
+                    printf("%s foi a vencedora!", cidade2);
+                }       else    {
+                        printf("Houve um empate!");
+                    }
+        break;
+
+        case 4:
+            printf("Cidade 1: %s \n", cidade1);
+            printf("PIB: %d \n", pib1);
+            printf("Cidade 2: %s \n", cidade2);
+            printf("PIB: %d \n", pib2);
+                 if (pib1>pib2) {
+                    printf("%s foi a vencedora!", cidade1);
+                }       else if(pib1<pib2)   {
+                    printf("%s foi a vencedora!", cidade2);
+                }       else    {
+                        printf("Houve um empate!");
+                    }
+        break;
+
+        case 5:
+            printf("Cidade 1: %s \n", cidade1);
+            printf("Densidade populacional: %d \n", DP1);
+            printf("Cidade 2: %s \n", cidade2);
+            printf("Densidade populacional: %d \n", DP2);
+                 if (DP1>DP2) {
+                    printf("%s foi a vencedora!", cidade1);
+                }       else if(DP1<DP2)   {
+                    printf("%s foi a vencedora!", cidade2);
+                }       else    {
+                        printf("Houve um empate!");
+                    }
+        break;
+
+        case 6:
+            printf("Cidade 1: %s \n", cidade1);
+            printf("PIB per capita: %d \n", PPC1);
+            printf("Cidade 2: %s \n", cidade2);
+            printf("PIB per capita: %d \n", PPC2);
+                 if (PPC1>PPC2) {
+                    printf("%s foi a vencedora!", cidade1);
+                }       else if(PPC1<PPC2)   {
+                    printf("%s foi a vencedora!", cidade2);
+                }       else    {
+                        printf("Houve um empate!");
+                    }
+        break;
+
+        case 7:
+            printf("Cidade 1: %s \n", cidade1);
+            printf("Super poder: %d \n", super1);
+            printf("Cidade 2: %s \n", cidade2);
+            printf("Super poder: %d \n", super2);
+                 if (super1>super2) {
+                    printf("%s foi a vencedora!", cidade1);
+                }       else if(super1<super2)   {
+                    printf("%s foi a vencedora!", cidade2);
+                }       else    {
+                        printf("Houve um empate!");
+                    }
+        break;
+        
+        default:
+        printf ("Opção inválida");
+            }
     
-}
+
+
+    return 0;
+        }
+
